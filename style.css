@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #000;
+    background: #fff;
+    line-height: 1.5;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 90px;
+    background: #1E1F25;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  section {
+    padding: 100px 20px 60px;
+  }
+  
+  .hero {
+    padding-top: 120px;
+  }
+  
+  .hero .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .hero-content {
+    flex: 1 1 400px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    background: #ff6600;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .hero-image {
+    flex: 1 1 400px;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .features, .faq, .contact, .testimonials, .contact-form, .pricing {
+    padding-top: 80px;
+  }
+  
+  .features h2, .faq h2, .contact h2, .testimonials h2, .contact-form h2, .pricing h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+  
+  .features-grid, .testimonials-grid, .pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .feature, .pricing-box, .testimonial {
+    background: #f3f3f3;
+    border-radius: 5px;
+    padding: 20px;
+    min-width: 250px;
+    flex: 1 1 250px;
+    text-align: center;
+  }
+  
+  .feature h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    margin: 0;
+  }
+  
+  .faq-item {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .faq-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .faq-item p {
+    margin: 0 0 20px;
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contact-list li {
+    margin-bottom: 10px;
+  }
+  
+  .contact-list a {
+    color: #ff6600;
+    text-decoration: none;
+  }
+  
+  .testimonial img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial h4 {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form label {
+    font-weight: 600;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    width: 120px;
+    border: none;
+    background: #ff6600;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .contact-form button:hover {
+    background: #e65c00;
+  }
+  
+  .pricing-grid {
+    gap: 40px;
+  }
+  
+  .pricing-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-box p {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .pricing-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pricing-box ul li {
+    margin: 5px 0;
+  }
+  
+  .alt {
+    background: #f9f9f9;
+  }
+  
+  .footer {
+    background: #1E1F25;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .footer p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 800px) {
+    .hero .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .features-grid, .testimonials-grid, .pricing-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
