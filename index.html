@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="description"
+    content="Kennerkall Solution Pvt Ltd - Connect instantly with professionals worldwide on a pay-per-minute basis."
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="follow, index" />
+  <title>Kennerkall Solution Pvt Ltd - Home</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts (Optional) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+    /* Rotating hero slides (no change in logic here) */
+    .hero-slide {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero-slide:not(.active) {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 1s ease-in-out;
+    }
+    /* Example brand colors (overriding some Tailwind defaults via inline style if desired):
+       .text-brand-blue { color: #1D4ED8 } // a deeper royal blue 
+       .bg-brand-blue   { background-color: #1D4ED8 }
+       .hover\:bg-brand-blue:hover { background-color: #1A48C2 }
+    */
+  </style>
+</head>
+<body class="text-gray-700 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <!-- Updated Logo Image (Placeholder) -->
+        <img
+          src="img/image.jpg"
+          alt="Kennerkall Updated Logo"
+          class="h-10 w-auto"
+        />
+        <!-- Company Name (Refined Font & Style) -->
+        <div class="text-lg font-bold tracking-wide text-blue-700 uppercase">
+          Kennerkall Solutions Pvt. Ltd.
+        </div>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6 text-sm font-semibold">
+          <li><a href="#home" class="hover:text-blue-500 transition">Home</a></li>
+          <li>
+            <a href="#how-it-works" class="hover:text-blue-500 transition"
+              >How It Works</a
+            >
+          </li>
+          <li><a href="#features" class="hover:text-blue-500 transition">Features</a></li>
+          <li><a href="#download-app" class="hover:text-blue-500 transition">Download</a></li>
+          <li><a href="#pricing" class="hover:text-blue-500 transition">Pricing</a></li>
+          <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="md:hidden text-blue-700 hover:text-blue-900 focus:outline-none"
+        id="mobile-menu-toggle"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Nav -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <ul class="bg-white border-t py-3 px-4 space-y-2">
+        <li><a href="#home" class="block hover:text-blue-500">Home</a></li>
+        <li>
+          <a href="#how-it-works" class="block hover:text-blue-500"
+            >How It Works</a
+          >
+        </li>
+        <li><a href="#features" class="block hover:text-blue-500">Features</a></li>
+        <li><a href="#download-app" class="block hover:text-blue-500">Download</a></li>
+        <li><a href="#pricing" class="block hover:text-blue-500">Pricing</a></li>
+        <li><a href="#contact" class="block hover:text-blue-500">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO (Rotating Slides) -->
+  <section
+    id="home"
+    class="relative h-[80vh] md:h-screen flex items-center justify-center overflow-hidden"
+  >
+    <!-- Slide Container -->
+    <div class="absolute inset-0">
+      <!-- Slide 1 -->
+      <div
+        class="hero-slide absolute inset-0 active"
+        style="background-image: url('https://images.pexels.com/photos/3184638/pexels-photo-3184638.jpeg');"
+      ></div>
+      <!-- Slide 2 -->
+      <div
+        class="hero-slide absolute inset-0"
+        style="background-image: url('https://images.pexels.com/photos/3153208/pexels-photo-3153208.jpeg');"
+      ></div>
+      <!-- Slide 3 -->
+      <div
+        class="hero-slide absolute inset-0"
+        style="background-image: url('https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg');"
+      ></div>
+    </div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <!-- Text Content -->
+    <div class="relative z-10 max-w-3xl text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Connect with Experts, Pay by the Minute
+      </h1>
+      <p class="text-lg text-gray-200 mb-6">
+        Access top professionals worldwide. Pay only for the minutes you use—no
+        subscriptions or hidden fees.
+      </p>
+      <a
+        href="#how-it-works"
+        class="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 font-semibold text-white rounded shadow-md transition"
+      >
+        Learn More
+      </a>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          How It Works
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Kennerkall makes consultations easy for both customers and professionals.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <!-- Step 1 -->
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">
+            1. Browse &amp; Choose
+          </h3>
+          <p class="text-gray-700">
+            Pick from a range of professionals with clear **per-minute** rates.
+          </p>
+        </div>
+        <!-- Step 2 -->
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">
+            2. Load Your Wallet
+          </h3>
+          <p class="text-gray-700">
+            Add funds using any payment method. Your balance covers per-minute calls.
+          </p>
+        </div>
+        <!-- Step 3 -->
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">
+            3. Call &amp; Pay by the Minute
+          </h3>
+          <p class="text-gray-700">
+            We deduct a 5% fee from each call for platform services; the rest goes to the expert.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          Key Features
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          A platform for quick, secure, and transparent consultations—whether you’re seeking advice or offering expertise.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Instant Access</h3>
+          <p class="text-gray-700">
+            Connect in real-time with experts from diverse fields—anytime, anywhere.
+          </p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Secure Payments</h3>
+          <p class="text-gray-700">
+            Wallet-based transactions ensure reliable and transparent pay-per-minute charges.
+          </p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">
+            Flexible Pricing
+          </h3>
+          <p class="text-gray-700">
+            Professionals set their own per-minute rates—customers pay only for time used.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD OUR APP -->
+  <section id="download-app" class="py-16 bg-gradient-to-r from-blue-50 to-blue-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <!-- Text Content -->
+        <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+            Download Our App
+          </h2>
+          <p class="text-gray-700 text-lg mb-6">
+            Transform your phone into a hub of instant expertise—anytime, anywhere.
+          </p>
+          <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+            <a
+              href="#"
+              class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition text-center"
+            >
+              Download on iOS
+            </a>
+            <a
+              href="#"
+              class="inline-block bg-white hover:bg-gray-100 text-blue-600 border border-gray-300 px-6 py-3 rounded font-semibold transition text-center"
+            >
+              Get it on Android
+            </a>
+          </div>
+        </div>
+        <!-- App Mockup Image -->
+        <div class="md:w-1/2 flex justify-center md:justify-end">
+          <img
+            src="https://images.pexels.com/photos/6078123/pexels-photo-6078123.jpeg"
+            alt="App Mockup"
+            class="w-full h-auto max-w-sm rounded shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          What Our Users Say
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Real feedback from professionals and customers who thrive with Kennerkall.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <div class="flex justify-center mb-4">
+            <img
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+              alt="Client"
+              class="w-16 h-16 rounded-full object-cover"
+            />
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            “Such a game-changer! I got connected to a lawyer within minutes and 
+            paid only for the actual call time.”
+          </p>
+          <h4 class="text-blue-600 font-semibold text-center">— Satisfied User</h4>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <div class="flex justify-center mb-4">
+            <img
+              src="https://images.pexels.com/photos/1779491/pexels-photo-1779491.jpeg"
+              alt="Expert"
+              class="w-16 h-16 rounded-full object-cover"
+            />
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            “I love setting my own rates. Kennerkall takes care of the payments 
+            minus a small 5% fee—simple and transparent.”
+          </p>
+          <h4 class="text-blue-600 font-semibold text-center">— Finance Expert</h4>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+          <div class="flex justify-center mb-4">
+            <img
+              src="https://images.pexels.com/photos/2913517/pexels-photo-2913517.jpeg"
+              alt="Client"
+              class="w-16 h-16 rounded-full object-cover"
+            />
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            “Smooth wallet system—top up, call, done. Perfect for quick questions 
+            with verified pros.”
+          </p>
+          <h4 class="text-blue-600 font-semibold text-center">— Frequent Caller</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          Transparent Pricing
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Pay only for the minutes used—professionals earn while they talk. 
+          Kennerkall charges just a 5% service fee from each call.
+        </p>
+      </div>
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded shadow">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-2">
+          Pay-Per-Minute Model
+        </h3>
+        <p class="text-gray-700 mb-4">
+          <strong>No Subscriptions</strong> • <strong>No Hidden Costs</strong>
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-6">
+          <li>Experts set their own per-minute rate</li>
+          <li>Funds deducted from customer’s wallet after the call</li>
+          <li>Professionals receive payment minus 5% platform fee</li>
+        </ul>
+        <a
+          href="#download-app"
+          class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-semibold transition"
+        >
+          Get Started
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:space-x-12">
+        <!-- Contact Info -->
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+            Get in Touch
+          </h2>
+          <p class="text-gray-700 mb-6">
+            Questions about our platform? Want to become an expert? We’re here to help.
+          </p>
+          <ul class="space-y-3 text-gray-700">
+            <li>
+              <strong>Support Email:</strong>
+              <a
+                href="mailto:support@kennerkall.com"
+                class="text-blue-600 hover:underline ml-2"
+              >
+                support@kennerkall.com
+              </a>
+            </li>
+            <li>
+              <strong>Phone:</strong>
+              <a
+                href="tel:+917897892499"
+                class="text-blue-600 hover:underline ml-2"
+              >
+                +91 789 789 2499
+              </a>
+            </li>
+            <li>
+              <strong>Facebook:</strong>
+              <a
+                href="https://facebook.com/kennerkall"
+                class="text-blue-600 hover:underline ml-2"
+                target="_blank"
+              >
+                facebook.com/kennerkall
+              </a>
+            </li>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a
+                href="https://linkedin.com/company/kennerkall"
+                class="text-blue-600 hover:underline ml-2"
+                target="_blank"
+              >
+                linkedin.com/company/kennerkall
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Contact Form -->
+        <div class="md:w-1/2 bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Send Us a Message</h3>
+          <form action="#" method="POST">
+            <div class="mb-4">
+              <label class="block text-gray-700 font-semibold mb-1" for="name"
+                >Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 font-semibold mb-1"
+                for="email"
+                >Email</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                class="block text-gray-700 font-semibold mb-1"
+                for="message"
+                >Message</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                required
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t py-6">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-gray-600">
+        © <span id="year"></span> Kennerkall Solution Pvt Ltd. All rights reserved.
+      </p>
+      <p class="text-sm text-gray-400 mt-1">
+        Empowering you to connect with experts on demand.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu & Rotating Hero Slides -->
+  <script>
+    // Mobile Menu Toggle
+    const toggleBtn = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Hero Slides
+    const slides = document.querySelectorAll(".hero-slide");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
+      });
+    }
+
+    // Auto-rotate slides every 5 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+  </script>
+</body>
+</html>
